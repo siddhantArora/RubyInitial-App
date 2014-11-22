@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  
+ #Siddhant comment # get 'pages/home'
+
+#route change to localhost:3000 rather going to pages/home
+  root "pages#home" 
+  get "about" =>"pages#about" #what ever you put at begining ,creates about_path
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
