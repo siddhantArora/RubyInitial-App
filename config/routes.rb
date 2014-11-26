@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  
+  #device will set up routes for us
+  devise_for :users
  #Siddhant comment # get 'pages/home'
 
 #route change to localhost:3000 rather going to pages/home

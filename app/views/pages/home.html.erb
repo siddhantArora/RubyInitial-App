@@ -6,6 +6,10 @@
 <p>Let's sign up <a href="#">here</a>  </p>
 -->
 <!-- Usual RUBY way-->
-<p><%= link_to "Log in" , "#" ,class: " btn btn-default" %> 
-<%= link_to "Sign up" , "#" ,class: " btn btn-primary " %> </p>
+<% if user_signed_in? %>
+	# Welcome into the app !
+<% else %>
+	<p><%= link_to "Log in" ,"new_user_session_path" ,class: " btn btn-default" %> 
+	<%= link_to "Sign up" , "new_user_registration_path ",class: " btn btn-primary " %> </p>
+<% end %>
 </div>

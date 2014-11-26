@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'ruby', '2.0.0'
+gem 'ruby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 
@@ -38,6 +38,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'bootstrap-sass', '~> 3.3.1.0'
+gem 'devise', '~> 3.4.1'
 
 group :development , :test do 
 
