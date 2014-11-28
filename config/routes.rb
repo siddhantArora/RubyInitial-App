@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :pins
+
   #device will set up routes for us
   devise_for :users
  #Siddhant comment # get 'pages/home'
