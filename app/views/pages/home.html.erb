@@ -9,7 +9,9 @@
 <% if user_signed_in? %>
 	# Welcome into the app !
 <% else %>
-	<p><%= link_to "Log in" ,"new_user_session_path" ,class: " btn btn-default" %> 
-	<%= link_to "Sign up" , "new_user_registration_path ",class: " btn btn-primary " %> </p>
+	<p>
+		<%= link_to "Log in" ,"new_user_session_path" ,class: " btn btn-default" %> 
+		<%= link_to "Sign up" , "new_user_registration_path ",class: " btn btn-primary " %>
+	 </p>
 <% end %>
 </div>
