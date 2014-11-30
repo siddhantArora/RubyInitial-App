@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Description</th>
+      <th>User_id</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,9 +13,15 @@
     <% @pins.each do |pin| %>
       <tr>
         <td><%= pin.description %></td>
+       <!-- pin.user.email , note email could be nil for any of the user so better use if pin.user or try(email)-->
+         
+        <td><%= pin.user.email if pin.user%></td>
         <td><%= link_to 'Show', pin %></td>
+        <!-- show the edit , destroy option of only to the current user to whom the pin belongs-->
+        <% if pin.user == current_user%>
         <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
         <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +29,6 @@
 
 <br>
 
-<%= link_to 'New Pin', new_pin_path %>
+<% if user_signed_in? %> 
+  <%= link_to 'New Pin', new_pin_path %>
+<% end %>
