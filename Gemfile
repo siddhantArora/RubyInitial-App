@@ -49,6 +49,12 @@ gem 'aws-sdk', '~> 1.59.0'
 
 gem 'masonry-rails', '~> 0.2.4'
 
+# this will add paginate,but not center aligned and withing the box
+gem 'will_paginate', '~> 3.0.7'
+
+#Bootstrap paginate
+gem 'will_paginate-bootstrap', '~> 1.0.1'
+
 group :development , :test do 
 
 # Use sqlite3 as the database for Active Record
