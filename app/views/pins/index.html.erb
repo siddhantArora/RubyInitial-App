@@ -31,7 +31,7 @@
              <p><%= pin.description %></p>
              <!-- pin.user.email , note email could be nil for any of the user so better use if pin.user or try(email)-->
                
-              <p><strong><%= pin.user.email if pin.user%></strong></p>
+              <p><strong><%= pin.user.name if pin.user%></strong></p>
               <!--remove show so that now click on image will show the pic -->
               <!--%= link_to 'Show', pin %-->
               <!-- show the edit , destroy option of only to the current user to whom the pin belongs-->
