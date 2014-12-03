@@ -1,3 +1,6 @@
+<!--we have change pages/home to partila _home.html.erb , now rendering it here -->
+<%= render 'pages/home' unless user_signed_in? %>
+
 <!--h1>Listing pins</h1-->
 
 <!--table>

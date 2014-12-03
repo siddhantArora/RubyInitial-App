@@ -7,7 +7,10 @@ Rails.application.routes.draw do
  #Siddhant comment # get 'pages/home'
 
 #route change to localhost:3000 rather going to pages/home
-  root "pages#home" 
+# now we want to show the pin index page on out home so changing the route to index
+  #root "pages#home" 
+  root "pins#index"
+
   get "about" =>"pages#about" #what ever you put at begining ,creates about_path
 
   # The priority is based upon order of creation: first created -> highest priority.
