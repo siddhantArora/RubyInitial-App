@@ -15,9 +15,13 @@ class PinsController < ApplicationController
   before_action :authenticate_user!,except:[:index,:show]
 
   respond_to :html
+  #pins are pulled in our app from here
+  #till now they are stored in chronological order not by order in which we have created them 
+  #if u look now(before reverse chronological order) the left most will have sallest id and rightmost or the last one wll ahve largest id
+  #changing @pins= Pin.all to reverse chronological order 
 
   def index
-    @pins = Pin.all
+    @pins = Pin.all.order("created_at DESC")
     respond_with(@pins)
   end
 
