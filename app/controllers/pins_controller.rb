@@ -21,7 +21,7 @@ class PinsController < ApplicationController
   #changing @pins= Pin.all to reverse chronological order 
 
   def index
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page],:per_page => 4) 
+    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page],:per_page => 8) 
     respond_with(@pins)
   end
 
